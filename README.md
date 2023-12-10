@@ -2,14 +2,6 @@
 
 This Python library is a rewritten version of the CryptoJS AES library in PHP. It allows you to encrypt and decrypt data using the AES algorithm.
 
-## Installation
-
-To use this library, you need to have Python installed. You can install the library by running the following command:
-
-```
-pip install pycryptodomex
-```
-
 ## Usage
 
 ### Encryption
