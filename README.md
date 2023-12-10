@@ -6,12 +6,12 @@ This Python library is a rewritten version of the CryptoJS AES library in PHP. I
 
 ### Encryption
 
-To encrypt data, you can use the `encrypt(data, password)` method. The `data` parameter can be a dictionary or a string, and the `password` parameter is the password you want to use for encryption.
+To encrypt data, you can use the `encrypt(data, password)` method. The `data` parameter can be any type, and the `password` parameter is the password you want to use for encryption.
 
 Example:
 
 ```python
-import CryptoJsAes
+from CryptojsAesPython import CryptoJsAes
 
 data = {
     "username": "john_doe",
@@ -27,7 +27,7 @@ print(encrypted_data)
 Output:
 
 ```
-{"ct": "uWxBJw3yviWkUg==", "iv": "1f5b28b8f7a3d87fc4e37d0dc8c3f1e3", "s": "f6e1c3fcd7e8a0f0"}
+{"ct": "KXaW9CEDgQlr9sN/fp8/E4jsRpFeF8/pdocrsaQ8PdnSSJp1e5kIwD3nrNS8gBzcp5h+no/KVxTNppjHwa9U9A==", "iv": "0e944c921ea2baad50091a2ee2c3aba9", "s": "af31ce71841c9620"}
 ```
 
 ### Decryption
@@ -37,9 +37,9 @@ To decrypt data, you can use the `decrypt(json_str, password)` method. The `json
 Example:
 
 ```python
-import CryptoJsAes
+from CryptojsAesPython import CryptoJsAes
 
-encrypted_data = '{"ct": "uWxBJw3yviWkUg==", "iv": "1f5b28b8f7a3d87fc4e37d0dc8c3f1e3", "s": "f6e1c3fcd7e8a0f0"}'
+encrypted_data = '{"ct": "KXaW9CEDgQlr9sN/fp8/E4jsRpFeF8/pdocrsaQ8PdnSSJp1e5kIwD3nrNS8gBzcp5h+no/KVxTNppjHwa9U9A==", "iv": "0e944c921ea2baad50091a2ee2c3aba9", "s": "af31ce71841c9620"}'
 password = "mysecretpassword"
 
 decrypted_data = CryptoJsAes.decrypt(encrypted_data, password)
